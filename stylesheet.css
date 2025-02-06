@@ -1097,11 +1097,11 @@ section {
 }
 
 .top i{
-    color: #000;
-    background: #0ef;
-    font-size: 20px;
-    padding: 10px;
-    border-radius: 0.5rem;
+    color:rgb(0, 238, 255);
+    background: rgba(0, 238, 255, 0.14);
+    font-size: 80px;
+    padding: 30px;
+    border-radius: 10rem;
 }
 
 .contact {
