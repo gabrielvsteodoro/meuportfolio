@@ -607,19 +607,19 @@ section {
 }
 
 .progress-line.html span {
-    width: 75%;
+    width: 80%;
 }
 
 .progress-line.css span {
-    width: 50%;
+    width: 60%;
 }
 
 .progress-line.javascript span {
-    width: 25%;
+    width: 30%;
 }
 
 .progress-line.python span {
-    width: 55%;
+    width: 60%;
 }
 
 .progress-line.SQL span{
@@ -640,19 +640,19 @@ section {
 }
 
 .progress-line.html span::after {
-    content: "75%";
+    content: "80%";
 }
 
 .progress-line.css span::after {
-    content: "50%";
+    content: "60%";
 }
 
 .progress-line.javascript span::after {
-    content: "25%";
+    content: "30%";
 }
 
 .progress-line.python span::after {
-    content: "55%";
+    content: "60%";
 }
 
 .progress-line.SQL span::after {
