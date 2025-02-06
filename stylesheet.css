@@ -527,13 +527,14 @@ section {
 }
 
 .container1 {
-    width: 600px;
+    width: 700px;
     height: auto;
     padding: 75px 90px;
     margin: 0;
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
     align-items: center; 
+    font-size: 25px;
 }
 
 .heading1 {
@@ -551,11 +552,19 @@ section {
 }
 
 .technical-bars {
-    width: 100%;
+    width: 150%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: -10px;
+    margin-top: -10px;   
+}
+
+.technical-bars .bar i {
+    font-size: 40px;
+}
+
+.technical-bars .bar .info #name-tecSkills {
+    font-size: 23px;
 }
 
 .technical-bars .bar {
@@ -641,22 +650,27 @@ section {
 
 .progress-line.html span::after {
     content: "80%";
+    font-size: 18px;
 }
 
 .progress-line.css span::after {
     content: "60%";
+    font-size: 18px;
 }
 
 .progress-line.javascript span::after {
     content: "30%";
+    font-size: 18px;
 }
 
 .progress-line.python span::after {
     content: "60%";
+    font-size: 18px;
 }
 
 .progress-line.SQL span::after {
     content: "30%";
+    font-size: 18px;
 }
 
 .progress-line span::before {
@@ -681,6 +695,7 @@ section {
 }
 
 .radial-bars {
+    margin-top: 40px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -688,8 +703,19 @@ section {
     align-items: flex-start;
 }
 
+.radial-bars .radial-bar .percentage {
+    font-size: 25px;
+}
+
+.radial-bars .radial-bar .text {
+    font-size: 25px;
+    text-align: center;
+}
+
+
+
 .radial-bar {
-    width: 45%;
+    width: 50%;
     height: 200px;
     margin-bottom: 20px;
     position: relative;
@@ -802,7 +828,7 @@ section {
 
 .radial-bar .text {
     position: absolute;
-    top: -20px;
+    top: -40px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 17px;
@@ -811,7 +837,10 @@ section {
     opacity: 1;
 }
 
-
+.radial-bar:nth-child(3),
+.radial-bar:nth-child(4) {
+    margin-top: 40px; /* Ajuste esse valor conforme necessário */
+}
 
 
 
