@@ -543,6 +543,7 @@ section {
     text-underline-offset: 10px;
     text-decoration-thickness: 5px;
     margin-bottom: 50px;
+    font-size: 35px;
 }
 
 .bar {
@@ -1149,6 +1150,20 @@ section {
     .contact-form {
         display: none;
     }
+
+    .top{
+        position: fixed;
+        bottom: 2.1rem;
+        right: 2.1rem;
+    }
+    
+    .top i{
+        color:rgb(0, 238, 255);
+        background: rgba(0, 238, 255, 0.14);
+        font-size: 80px;
+        padding: 30px;
+        border-radius: 10rem;
+    }
 }
 
 
@@ -1212,17 +1227,17 @@ section {
     }
 
     .top{
-        position: fixed;
-        bottom: 2.1rem;
-        right: 2.1rem;
+        position: fixed !important;
+        bottom: 2.1rem !important;
+        right: 2.1rem !important;
     }
     
     .top i{
-        color:rgb(0, 238, 255);
-        background: rgba(0, 238, 255, 0.14);
-        font-size: 80px;
-        padding: 30px;
-        border-radius: 10rem;
+        color:rgb(0, 238, 255) !important;
+        background: rgba(0, 238, 255, 0.14) !important;
+        font-size: 80px !important;
+        padding: 30px !important;
+        border-radius: 10rem !important;
     }
 
 }
