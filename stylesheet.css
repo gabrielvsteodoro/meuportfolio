@@ -1120,20 +1120,6 @@ section {
     .contact-form {
         display: none;
     }
-
-    .top{
-        position: fixed;
-        bottom: 2.1rem;
-        right: 2.1rem;
-    }
-    
-    .top i{
-        color:rgb(0, 238, 255);
-        background: rgba(0, 238, 255, 0.14);
-        font-size: 80px;
-        padding: 30px;
-        border-radius: 10rem;
-    }
 }
 
 
