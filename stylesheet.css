@@ -796,6 +796,7 @@ section {
     }
 }
 
+
 @keyframes animate-path2 {
     100% {
         stroke-dashoffset: 30;
