@@ -713,6 +713,10 @@ section {
     text-align: center;
 }
 
+.radial-bars .radial-bar #text2{
+    margin-top: -25px;
+}
+
 
 
 .radial-bar {
