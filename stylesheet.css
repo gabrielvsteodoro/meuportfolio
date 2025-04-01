@@ -280,12 +280,25 @@ body
 
 /* Estilização da seção "Sobre", com layout em grid de duas colunas */
 
+
 .about{
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 1.5rem;
-    padding: 0 20px;
+    padding: 0px 20px;
+}
+
+#about {
+    scroll-margin-top: 200px;
+}
+
+#section-services{
+    scroll-margin-top: 190px;
+}
+
+#sub-T-skills {
+    scroll-margin-top: 190px;
 }
 
 .about-img {
@@ -356,8 +369,18 @@ body
     text-align: center;
     font-size: 60px;
     padding-bottom: 70px;
+    padding-top: 10px;
     justify-content: center;
 }
+
+#sub-T-skills {
+    margin-top: 190px;
+}
+
+#section-project {
+    margin-top: 150px;
+}
+
 
 .sub-title span{
     color: #0ef;
