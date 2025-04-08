@@ -1,9 +1,6 @@
-
 /* ABAIXO TEMOS TODO O CÓDIGO DA PRIMEIRA PARTE DO SITE */
 
-
 /* Resetando margens e paddings de todos os elementos e definindo uma base para o layout */
-
 *
 {
     margin: 0;
@@ -12,7 +9,6 @@
     scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
 }
-
 
 /* Corpo da página com cor de fundo e texto */
 body
@@ -48,24 +44,127 @@ body
     animation: slideRight 1s ease forwards;
 }
 
-/* Estilo para os links da navegação */
+/* Estilo geral para os botões de navegação */
+.menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 101;
+    position: relative;
+}
+
+.menu-icon span {
+    height: 8px;
+    width: 60px;
+    background: white;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: 0.4s;
+}
+
+/* Animação suave */
+@keyframes slideDownFade {
+    0% {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Estilo da navbar para versão desktop */
+.navbar {
+    display: flex;
+    gap: 50px;
+}
+
 .navbar a {
-    display: inline-block;
-    font-size: 25px;
+    position: relative;
+    font-size: 20px;
     color: #fff;
     text-decoration: none;
     font-weight: 500;
-    margin-left: 35px;
-    transition: .3s;
-    opacity: 0;
-    animation: slideTop .5s ease forwards;
-    animation-delay: calc(.2s * var(--i));
+    transition: 0.3s;
 }
 
-/* Efeito de hover nos links da navegação */
-.navbar a:hover{
-    color: #0ef;
+.navbar a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background: #0ef;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s;
 }
+
+.navbar a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+@media (max-width: 1024px) {
+    .menu-icon {
+        display: flex;
+        right: -50px;
+        top: 10px;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 140px; /* espaço entre o menu e o dropdown */
+        right: 5%;
+        background: rgba(8, 27, 41, 0.8);
+        backdrop-filter: blur(15px);
+        box-shadow: 0 0 15px rgba(0, 238, 255, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        padding:20px;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        animation: slideDownFade 0.4s ease forwards;
+        z-index: 100;
+        width: 200px;
+        opacity: 0;
+        transform: translateY(-10px);
+        pointer-events: none;
+        transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    .navbar a {
+        font-size: 30px;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        padding: 0px 10px;
+        width: 100%;
+        border-radius: 20px;
+        transition: background 0.3s, color 0.3s;
+    }
+
+    .navbar a:hover {
+        background-color: rgba(14, 255, 255, 0.1);
+        color: #0ef;
+    }
+
+    .menu-toggle:checked + .menu-icon + .navbar {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+}
+
 
 /* Estilo para a seção home (página inicial) */
 .home {
@@ -120,7 +219,6 @@ body
     animation-delay: 1s;
 }
 
-/* Estilo para os ícones de redes sociais */
 .home-sci a{
     display: inline-flex;
     justify-content: center;
@@ -137,7 +235,6 @@ body
     opacity: 0;
     animation: slideLeft 1s ease forwards;
     animation-delay: calc(.2s * var(--i));
-
     margin: 30px 15px 30px 10px;
 }
 
@@ -149,15 +246,13 @@ body
 
 @media (max-width: 768px) {
     .home-sci a {
-      width: 60px;      /* aumenta a largura */
-      height: 60px;     /* aumenta a altura */
-      font-size: 30px;  /* aumenta o tamanho do ícone */
-      margin: 20px;     /* ajusta a margem, se necessário */
+        width: 60px;
+        height: 60px;
+        font-size: 30px;
+        margin: 20px;
     }
-  }
-  
+}
 
-/* Botão de chamada para ação */
 .btn-box{
     display: inline-block;
     padding: 12px 28px;
@@ -175,14 +270,12 @@ body
     0 0 25px #0ef;
 }
 
-/* Efeito de hover no botão */
 .btn-box:hover{
     box-shadow: 0 0 5px cyan, 
     0 0 25px cyan, 0 0 50px cyan,
     0 0 100px cyan, 0 0 200px cyan;
 }
 
-/* Definição das animações que fazem os elementos aparecerem em várias direções */
 @keyframes slideRight {
     0% {
         transform: translateX(-100px);
@@ -227,54 +320,6 @@ body
     }
 }
 
-/* Estilo geral para os botões de navegação */
-.navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-}
-
-.navbar a:hover {
-    color: #0ef;
-    background: #081b29;
-}
-
-.navbar a {
-    display: inline-block;
-    font-size: 20px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    margin: 20px; /* Espaçamento entre os botões */
-    padding: 12px 20px; /* Tamanho do botão */
-    background-color: #194666; /* Cor de fundo para a caixa */
-    border-radius: 30px; /* Cantos arredondados */
-    transition: 0.3s;
-    opacity: 0;
-    animation: slideTop .5s ease forwards;
-    animation-delay: calc(.2s * var(--i));
-}
-
-/* Efeito de hover */
-.navbar a:hover {
-    color: #0ef;
-    background: #0a2633; /* Cor de fundo do hover */
-}
-
-/* Responsividade para telas médias (menor que 768px) */
-@media (max-width: 768px) {
-    .navbar {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .navbar a {
-        font-size: 18px;
-        margin: 1px; /* Ajuste o espaçamento entre os botões */
-        padding: 8px 18px; /* Ajuste o tamanho do botão */
-    }
-}
 
 /* ABAIXO TEMOS TODO O CÓDIGO DA SEGUNDA PARTE DO SITE */
 
